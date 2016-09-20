@@ -13,6 +13,13 @@ namespace Agenda.View
 		public ContatosView ()
 		{
 			InitializeComponent ();
-		}
-	}
+            BindingContext = new ViewModel.ContatosVM();
+        }
+
+        public void CommandAdd(EventArgs e, Object o)
+        {
+            Agenda.App.Current.MainPage.Navigation.PushAsync(new View.CadastroView());
+        }
+
+    }
 }

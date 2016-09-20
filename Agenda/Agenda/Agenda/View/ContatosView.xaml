@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Agenda.View.ContatosView">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Name="Criar"></ToolbarItem>
+    <ToolbarItem Name="Criar" Command="{Binding AddCommand}"></ToolbarItem>
   </ContentPage.ToolbarItems>
-  <StackLayout>
+  <ContentPage.Content>
+  <StackLayout BackgroundColor="White">
     <ListView ItemsSource="{Binding ContatosMain}" x:Name="ListaContatos">
       <ListView.ItemTemplate>
         <DataTemplate>
@@ -14,4 +15,5 @@
       </ListView.ItemTemplate>
     </ListView>
   </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

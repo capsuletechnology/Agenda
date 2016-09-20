@@ -13,7 +13,6 @@ namespace Agenda
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new View.ContatosView());
         }
 
