@@ -5,9 +5,7 @@
     <ContentPage.ToolbarItems>
       <ToolbarItem Name="Criar"></ToolbarItem>
     </ContentPage.ToolbarItems>
-
     <StackLayout>
-      <Button Text="Adicionar Novo Contato" Command="{Binding AdicionarCommand}" VerticalOptions="Center" HorizontalOptions="Center"/>
       <ListView ItemsSource="{Binding ContatosMain}" x:Name="ListaContatos">
         <ListView.ItemTemplate>
           <DataTemplate>
@@ -16,7 +14,4 @@
         </ListView.ItemTemplate>
       </ListView>
     </StackLayout>
-    
-  
-
 </ContentPage>
