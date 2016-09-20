@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
@@ -11,7 +12,8 @@ namespace Agenda
     {
         public App()
         {
-            // The root page of your application
+            InitializeComponent();
+
             MainPage = new NavigationPage(new View.ContatosView());
         }
 

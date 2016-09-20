@@ -8,11 +8,11 @@ using Xamarin.Forms;
 
 namespace Agenda.View
 {
-	public partial class ContatosView : ContentPage
-	{
-		public ContatosView ()
-		{
-			InitializeComponent ();
-		}
-	}
+    public partial class InfoView : ContentPage
+    {
+        public InfoView()
+        {
+            InitializeComponent();
+        }
+    }
 }
