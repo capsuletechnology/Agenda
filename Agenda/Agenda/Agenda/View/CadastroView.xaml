@@ -2,10 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Agenda.View.CadastroView">
-  <StackLayout BackgroundColor="White">
-    <Entry Text="{Binding Nome}" Keyboard="Text" Placeholder="Nome"></Entry>
-    <Entry Text="{Binding Telefone}" Keyboard="Telephone" Placeholder="(00)00000-0000"></Entry>
-    <Entry Text="{Binding Email}" Keyboard="Email" Placeholder="xxxx@xx.com.br"></Entry>
-    <Button Text="Cadastrar" Command="{Binding CadastrarCommand}"></Button>
+  <StackLayout Spacing="10" Padding="25" VerticalOptions="Center">
+    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+      <Entry Text="{Binding Nome}" Keyboard="Text" Placeholder="Nome" WidthRequest="150"></Entry>
+      <Entry Text="{Binding Sobrenome}" Keyboard="Text" Placeholder="Sobrenome" WidthRequest="150"></Entry>
+    </StackLayout>
+    <Entry Text="{Binding Apelido}" Keyboard="Text" Placeholder="Apelido"></Entry>
+    <Entry Text="{Binding Telefone}" Keyboard="Telephone" Placeholder="Telefone"></Entry>
+    <Entry Text="{Binding Email}" Keyboard="Email" Placeholder="Email"></Entry>    
+    <Button Text="Cadastrar" Command="{Binding CadastrarCommand}" BackgroundColor="#2980b9" TextColor="#ecf0f1" HeightRequest="70"></Button>
   </StackLayout>
 </ContentPage>

@@ -13,6 +13,8 @@ namespace Agenda.View
 		public CadastroView ()
 		{
 			InitializeComponent ();
+            this.Title = "Novo Contato";
+            this.BackgroundColor = Color.FromHex("#ecf0f1");
 		}
 	}
 }
