@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace Agenda.View
 		public CadastroView ()
 		{
 			InitializeComponent ();
-            BindingContext = new ViewModel.CadastroVM();
+            BindingContext = new ViewModel.ContatosVM();
             this.Title = "Novo Contato";
             this.BackgroundColor = Color.FromHex("#ecf0f1");
 		}

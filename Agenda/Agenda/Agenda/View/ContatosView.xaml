@@ -5,12 +5,14 @@
   <ContentPage.ToolbarItems>
     <ToolbarItem Name="Criar" Command="{Binding AddCommand}"></ToolbarItem>
   </ContentPage.ToolbarItems>
-  
+
   <StackLayout>
     <ListView ItemsSource="{Binding Lista}">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <TextCell Text="{Binding Nome}" TextColor="Black"/>
+          <ViewCell>
+            <Label Text="{Binding Nome}" TextColor="Black"/>
+          </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
