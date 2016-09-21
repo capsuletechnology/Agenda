@@ -7,7 +7,7 @@ using SQLite.Net.Interop;
 
 namespace Agenda.Services
 {
-    interface IConfig
+    public interface IConfig
     {
         string Diretorio { get; }
         ISQLitePlatform Plataforma { get; }

@@ -13,6 +13,7 @@ namespace Agenda.View
 		public CadastroView ()
 		{
 			InitializeComponent ();
+            BindingContext = new ViewModel.CadastroVM();
             this.Title = "Novo Contato";
             this.BackgroundColor = Color.FromHex("#ecf0f1");
 		}
