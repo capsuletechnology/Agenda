@@ -14,6 +14,14 @@ namespace Agenda.View
 		{
 			InitializeComponent ();
             BindingContext = new ViewModel.ContatosVM();
+
+            ListaContatos.ItemTapped += async (sender, e) =>
+            {
+                var contato = e.Item as Model.ContatoModel;
+                //await MVVM.App.Current.MainPage.Navigation.PushAsync(new View.Autor(livro.Id));
+                await Agenda.App.Current.MainPage.Navigation.PushAsync(new View.InfoView(contato));
+            };
+
         }
 
         public void CommandAdd(EventArgs e, Object o)

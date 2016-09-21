@@ -10,9 +10,20 @@ namespace Agenda.View
 {
     public partial class InfoView : ContentPage
     {
-        public InfoView()
+        public InfoView(Model.ContatoModel contato)
         {
             InitializeComponent();
+            AlimentarContatos(contato);
+
         }
+
+        public void AlimentarContatos(Model.ContatoModel contato)
+        {
+            this.Title = contato.Nome;
+            Email.Text = contato.Telefone;
+
+
+        }
+
     }
 }
