@@ -7,10 +7,10 @@ using Xamarin.Forms;
 
 namespace Agenda.DAO
 {
-    public class FabricanteDAO : IDisposable
+    public class ContatoDAO : IDisposable
     {
         private SQLite.Net.SQLiteConnection _conexao;
-        public FabricanteDAO()
+        public ContatoDAO()
         {
             var config = DependencyService.Get<Services.IConfig>();
             _conexao = new SQLite.Net.SQLiteConnection(config.Plataforma, System.IO.Path.Combine(config.Diretorio, "banco1.db3"));

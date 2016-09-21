@@ -5,15 +5,16 @@
   <ContentPage.ToolbarItems>
     <ToolbarItem Name="Criar" Command="{Binding AddCommand}"></ToolbarItem>
   </ContentPage.ToolbarItems>
-  <ContentPage.Content>
-  <StackLayout BackgroundColor="White">
-    <ListView ItemsSource="{Binding ContatosMain}" x:Name="ListaContatos">
+
+  <StackLayout>
+    <ListView ItemsSource="{Binding Lista}">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <TextCell Text="{Binding Nome}"/>
+          <ViewCell>
+            <Label Text="{Binding Nome}" TextColor="Black"/>
+          </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
   </StackLayout>
-    </ContentPage.Content>
 </ContentPage>
