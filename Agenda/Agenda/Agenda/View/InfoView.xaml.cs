@@ -19,9 +19,13 @@ namespace Agenda.View
 
         public void AlimentarContatos(Model.ContatoModel contato)
         {
+            string nome;
+            nome = contato.Nome + " '" + contato.Apelido + "' " + contato.Sobrenome;
             this.Title = contato.Nome;
-            Email.Text = contato.Telefone;
-
+            Email.Text = contato.Email;
+            Telefone.Text = contato.Telefone;            
+            NomeCompleto.Text = nome;
+            PrimeiraLetra.Text = contato.Nome.Substring(0,1);
 
         }
 

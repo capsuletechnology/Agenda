@@ -7,11 +7,11 @@
   </ContentPage.ToolbarItems>
 
   <StackLayout>
-    <ListView ItemsSource="{Binding Lista}">
+    <ListView ItemsSource="{Binding Lista}" x:Name="ListaContatos"  ItemSelected="ItemSelecionado">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-            <Label Text="{Binding Nome}" TextColor="Black"/>
+            <Label Text="{Binding Nome}" TextColor="Black" VerticalTextAlignment="Center"/>
           </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>

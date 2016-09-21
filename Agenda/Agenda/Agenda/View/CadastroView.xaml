@@ -12,7 +12,7 @@
     <Entry Text="{Binding Apelido}" Keyboard="Text" Placeholder="Apelido"></Entry>
     <Entry Text="{Binding Telefone}" Keyboard="Telephone" Placeholder="Telefone"></Entry>
     <Entry Text="{Binding Email}" Keyboard="Email" Placeholder="Email"></Entry>    
-    <Button Text="Cadastrar" Command="{Binding CadastrarCommand}"/>
+    <Button Text="Cadastrar" Command="{Binding CadastrarCommand}" BackgroundColor="#2980b9" TextColor="#ecf0f1" HeightRequest="70"/>
   </StackLayout>
   </ContentPage.Content>
 </ContentPage>
