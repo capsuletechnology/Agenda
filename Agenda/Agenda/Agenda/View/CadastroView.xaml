@@ -1,18 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Agenda.View.CadastroView">
-  <ContentPage.Content> 
-  
-	<StackLayout Spacing="10" Padding="25" VerticalOptions="Center">
-    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
-      <Entry Text="{Binding Nome}" Keyboard="Text" Placeholder="Nome" WidthRequest="150"></Entry>
-      <Entry Text="{Binding Sobrenome}" Keyboard="Text" Placeholder="Sobrenome" WidthRequest="150"></Entry>
-    </StackLayout>
-    <Entry Text="{Binding Apelido}" Keyboard="Text" Placeholder="Apelido"></Entry>
-    <Entry Text="{Binding Telefone}" Keyboard="Telephone" Placeholder="Telefone"></Entry>
-    <Entry Text="{Binding Email}" Keyboard="Email" Placeholder="Email"></Entry>    
-    <Button Text="Cadastrar" Command="{Binding CadastrarCommand}" BackgroundColor="#2980b9" TextColor="#ecf0f1" HeightRequest="70"/>
-  </StackLayout>
-  </ContentPage.Content>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Agenda.View.CadastroView">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Spacing="10" Padding="25" VerticalOptions="Center">
+				<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+					<Entry Text="{Binding Nome}" Keyboard="Text" Placeholder="Nome" WidthRequest="130" />
+					<Entry Text="{Binding Sobrenome}" Keyboard="Text" Placeholder="Sobrenome" WidthRequest="130" />
+				</StackLayout>
+				<Entry Text="{Binding Apelido}" Keyboard="Text" Placeholder="Apelido" />
+				<Entry Text="{Binding Telefone}" Keyboard="Telephone" Placeholder="Telefone" />
+				<Entry Text="{Binding Email}" Keyboard="Email" Placeholder="Email" />
+				<Label Text="Endereço 1" TextColor="Silver" HorizontalTextAlignment="Start" />
+				<StackLayout Orientation="Horizontal">
+					<Entry Text="{Binding Rua1}" Keyboard="Text" Placeholder="Rua" WidthRequest="200" />
+					<Entry Text="{Binding Numero1}" Keyboard="Text" Placeholder="N°" WidthRequest="60" />
+				</StackLayout>
+				<Entry Text="{Binding Logradouro1}" Keyboard="Text" Placeholder="Logradouro" />
+				<Label Text="Endereço 2" TextColor="Silver" HorizontalTextAlignment="Start" />
+				<StackLayout Orientation="Horizontal">
+					<Entry Text="{Binding Rua2}" Keyboard="Text" Placeholder="Rua" WidthRequest="200" />
+					<Entry Text="{Binding Numero2}" Keyboard="Text" Placeholder="N°" WidthRequest="60" />
+				</StackLayout>
+				<Entry Text="{Binding Logradouro2}" Keyboard="Text" Placeholder="Logradouro" />
+				<Button Text="Cadastrar" Command="{Binding CadastrarCommand}" BackgroundColor="#2980b9" TextColor="#ecf0f1" HeightRequest="70" />
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
 </ContentPage>
