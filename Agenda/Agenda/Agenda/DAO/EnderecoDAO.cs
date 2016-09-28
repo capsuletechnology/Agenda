@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
+using SQLiteNetExtensions.Extensions;
 
 namespace Agenda.DAO
 {
@@ -15,6 +16,12 @@ namespace Agenda.DAO
 		public List<Model.Endereco> Lista()
 		{
 			return _conexao.Table<Model.Endereco>().OrderBy(cont => cont.Codigo).ToList();
+		}
+
+		public void Update(Model.Endereco objeto)
+		{
+			_conexao.UpdateWithChildren(objeto);
+
 		}
 
 		//public Model.Endereco BuscarPorCodigo(int cod)

@@ -22,10 +22,6 @@ namespace Agenda.DAO
 			_conexao.InsertWithChildren(objeto);
 		}
 
-		public void Update(T objeto)
-		{
-			_conexao.Update(objeto);
-		}
 
 		public void Delete(T objeto)
 		{

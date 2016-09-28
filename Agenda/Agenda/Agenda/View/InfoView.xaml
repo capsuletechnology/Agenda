@@ -1,26 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Agenda.View.InfoView">
-
-  <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="40" />
-      <RowDefinition Height="40" />
-      <RowDefinition Height="40" />
-      <RowDefinition Height="40" />
-      <RowDefinition Height="40" />
-    </Grid.RowDefinitions>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="50" />
-      <ColumnDefinition Width="50" />
-      <ColumnDefinition Width="50" />
-      <ColumnDefinition Width="50" />
-      <ColumnDefinition Width="50" />
-    </Grid.ColumnDefinitions>
-      <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="PrimeiraLetra" FontSize="80" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" TextColor="Black"/>
-      <Label x:Name="Telefone" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" TextColor="Black"/>
-      <Label x:Name="Email" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" TextColor="Black"/>
-      <Label x:Name="NomeCompleto"  Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" TextColor="Black"/>
-  </Grid>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Agenda.View.InfoView">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Name="Editar" Icon="pencil.png" Clicked="EditarContato"/>
+		<ToolbarItem Name="Apagar" Icon="trash.png" Clicked="ApagarContato"/>
+	</ContentPage.ToolbarItems>
+	<Grid Padding="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40" />
+			<RowDefinition Height="40" />
+			<RowDefinition Height="40" />
+			<RowDefinition Height="25" />
+			<RowDefinition Height="40" />
+			<RowDefinition Height="40" />
+			<RowDefinition Height="25" />
+			<RowDefinition Height="40" />
+			<RowDefinition Height="40" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="50" />
+			<ColumnDefinition Width="50" />
+			<ColumnDefinition Width="50" />
+			<ColumnDefinition Width="50" />
+			<ColumnDefinition Width="50" />
+		</Grid.ColumnDefinitions>
+		<Label VerticalTextAlignment="Start" HorizontalTextAlignment="Start" x:Name="PrimeiraLetra" FontSize="80" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" TextColor="Black" />
+		<Label x:Name="Telefone" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" TextColor="Black" HorizontalTextAlignment="Start" />
+		<Label x:Name="Email" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" TextColor="Black" HorizontalTextAlignment="Start" />
+		<Label x:Name="NomeCompleto" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" TextColor="Black" HorizontalTextAlignment="Start" />
+		<Label Text="Endereço 1" TextColor="Silver" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" />
+		<Label x:Name="Rua1" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+		<Label x:Name="Numero1" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+		<Label x:Name="Logradouro1" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+		<Label Text="Endereço 2" TextColor="Silver" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" />
+		<Label x:Name="Rua2" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+		<Label x:Name="Numero2" Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="2" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+		<Label x:Name="Logradouro2" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="5" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+	</Grid>
 </ContentPage>

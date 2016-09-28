@@ -7,7 +7,7 @@
   </ContentPage.ToolbarItems>
 
   <StackLayout>
-    <ListView ItemsSource="{Binding Lista}" x:Name="ListaContatos"  ItemSelected="ItemSelecionado">
+    <ListView ItemsSource="{Binding Lista}" x:Name="ListaContatos">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>

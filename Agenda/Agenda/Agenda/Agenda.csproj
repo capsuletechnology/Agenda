@@ -56,6 +56,9 @@
     <Compile Include="Model\Endereco.cs" />
     <Compile Include="DAO\EnderecoDAO.cs" />
     <Compile Include="DAO\GenericDAO.cs" />
+    <Compile Include="View\EditarView.xaml.cs">
+      <DependentUpon>EditarView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -87,6 +90,9 @@
     <EmbeddedResource Include="App.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditarView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

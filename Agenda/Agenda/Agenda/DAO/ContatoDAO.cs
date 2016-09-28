@@ -18,8 +18,19 @@ namespace Agenda.DAO
 
 		public List<Model.ContatoModel> Lista()
 		{
-			return _conexao.Table<Model.ContatoModel>().OrderBy(cont => cont.Nome).ToList();
+			return _conexao.GetAllWithChildren<Model.ContatoModel>().OrderBy(cont => cont.Nome).ToList();
 		}
+
+		public void Update(Model.ContatoModel objeto)
+		{
+			_conexao.UpdateWithChildren(objeto);
+
+		}
+
+		//public List<Model.ContatoModel> Lista()
+		//{
+		//	return _conexao.Table<Model.ContatoModel>().OrderBy(cont => cont.Nome).ToList();
+		//}
 
 		//public Model.ContatoModel BuscarPorCodigo(int cod)
 		//{
