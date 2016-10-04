@@ -14,6 +14,7 @@ namespace Agenda.View
 		{
 			InitializeComponent ();
             BindingContext = new ViewModel.ContatosVM();
+			this.Title = "Contatos";
 
             ListaContatos.ItemTapped += async (sender, e) =>
             {
@@ -26,5 +27,11 @@ namespace Agenda.View
 		{
 			Agenda.App.Current.MainPage.Navigation.PushAsync(new View.CadastroView());
 		}
+
+		public void ItemSelecionado(object sender, SelectedItemChangedEventArgs e)
+		{
+			((ListView)sender).SelectedItem = null; // de-select the row
+		}
+
     }
 }

@@ -1,20 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Agenda.View.ContatosView">
-  <ContentPage.ToolbarItems>
-    <ToolbarItem Name="Criar" Command="{Binding AddCommand}"></ToolbarItem>
-  </ContentPage.ToolbarItems>
-
-  <StackLayout>
-    <ListView ItemsSource="{Binding Lista}" x:Name="ListaContatos">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell>
-            <Label Text="{Binding Nome}" TextColor="Black" VerticalTextAlignment="Center"/>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Agenda.View.ContatosView" xmlns:local="clr-namespace:Agenda.Custom;assembly=Agenda.Custom">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Name="Criar" Command="{Binding AddCommand}">
+		</ToolbarItem>
+	</ContentPage.ToolbarItems>
+	<StackLayout>
+		<local:ExtendedEntry Text="Testando"/>
+		<ListView ItemsSource="{Binding Lista}" x:Name="ListaContatos" ItemSelected="ItemSelecionado">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<Label Text="{Binding Nome}" TextColor="Black" VerticalTextAlignment="Center" />
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
 </ContentPage>

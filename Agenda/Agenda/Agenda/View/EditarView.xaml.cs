@@ -12,6 +12,7 @@ namespace Agenda.View
 		public EditarView(Model.ContatoModel contato)
 		{
 			InitializeComponent();
+			this.Title = "Editar";
 			this.contato = contato;
 			PreencherCampos();
 		}
@@ -50,6 +51,12 @@ namespace Agenda.View
 			using (var dados = new DAO.ContatoDAO())
 			{
 				dados.Update(this.contato);
+
+			}
+
+			using (var dados = new DAO.EnderecoDAO())
+			{
+				dados.Update(this.contato.Enderecos[0]);
 
 			}
 
